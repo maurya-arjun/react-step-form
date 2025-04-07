@@ -13,23 +13,35 @@ const Confirm = ({ nextStep, prevStep, values }) => {
 
   return (
     <div>
-      <div>
-        <dl>
-          <dt>FirstName</dt>
-          <dd> {values.firstName} </dd>
-          <dt>LastName</dt>
-          <dd> {values.lastName} </dd>
-          <dt>Email</dt>
-          <dd> {values.email} </dd>
-          <dt>Occupation</dt>
-          <dd> {values.occupation} </dd>
-          <dt>City</dt>
-          <dd> {values.city} </dd>
-          <dt>Bio</dt>
-          <dd> {values.bio} </dd>
+      <div className="max-w-xl sm:mx-auto sm:p-16 bg-white sm:shadow-md rounded-lg">
+        <dl className="space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">First Name</dt>
+            <dd className="text-gray-900"> {values.firstName} </dd>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">Last Name</dt>
+            <dd className="text-gray-900"> {values.lastName} </dd>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">Email</dt>
+            <dd className="text-gray-900"> {values.email} </dd>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">Occupation</dt>
+            <dd className="text-gray-900"> {values.occupation} </dd>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">City</dt>
+            <dd className="text-gray-900"> {values.city} </dd>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
+            <dt className="font-semibold text-gray-700">Bio</dt>
+            <dd className="text-gray-900"> {values.bio} </dd>
+          </div>
         </dl>
       </div>
-      <div>
+      <div className="mt-12 text-center space-x-2 space-y-2 sm:space-y-0">
         <button
           onClick={handleNextClick}
           className="p-4 bg-blue-500 text-white rounded-sm cursor-pointer"

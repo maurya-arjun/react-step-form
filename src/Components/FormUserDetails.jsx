@@ -9,36 +9,45 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
   return (
     <Fragment>
       <div className="firstName">
-        <label htmlFor="firstName">First Name</label>
-        <input
-          type="text"
-          placeholder="Enter First name"
-          name="firstName"
-          value={values.firstName}
-          onChange={(e) => handleChange("firstName", e)}
-        />
+        <label htmlFor="firstName" className="py-3 lg:hidden">First Name</label>
+        <div className="">
+            <input
+            type="text"
+            placeholder="Enter First name"
+            className="p-3 outline-1 w-full lg:border-b lg:border-blue-500 lg:outline-0 focus:border-blue-600"
+            name="firstName"
+            value={values.firstName}
+            onChange={(e) => handleChange("firstName", e)}
+            />
+        </div>
       </div>
-      <div className="lastName">
-        <label htmlFor="lastName">Last Name</label>
-        <input
-          type="text"
-          placeholder="Enter Last name"
-          name="lastName"
-          value={values.lastName}
-          onChange={(e) => handleChange("lastName", e)}
-        />
+      <div className="lastName mt-2">
+        <label htmlFor="lastName" className="py-3 lg:hidden">Last Name</label>
+        <div className="">
+            <input
+            type="text"
+            placeholder="Enter Last name"
+            name="lastName"
+            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            value={values.lastName}
+            onChange={(e) => handleChange("lastName", e)}
+            />
+        </div>
       </div>
-      <div className="email">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          placeholder="Enter Email"
-          name="email"
-          value={values.email}
-          onChange={(e) => handleChange("email", e)}
-        />
+      <div className="email mt-2">
+        <label htmlFor="email" className="py-3 lg:hidden">Email</label>
+        <div className="">
+            <input
+            type="email"
+            placeholder="Enter Email"
+            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            name="email"
+            value={values.email}
+            onChange={(e) => handleChange("email", e)}
+            />
+        </div>
       </div>
-      <div>
+      <div className="mt-12 text-center">
         <button
           onClick={handleClick}
           className="p-4 bg-blue-500 text-white rounded-sm cursor-pointer"

@@ -18,7 +18,7 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
         <input
           type="text"
           placeholder="Enter Occupation"
-            className="p-3 outline-1 w-full lg:border-b lg:border-blue-500 lg:outline-0 focus:border-blue-600"
+            className="p-3 w-full lg:border-b lg:border-blue-500 lg:outline-0 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
           name="occupation"
           value={values.occupation}
           onChange={(e) => handleChange("occupation", e)}
@@ -29,7 +29,7 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
         <input
           type="text"
           placeholder="Enter City"
-            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            className="p-3 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
           name="city"
           value={values.city}
           onChange={(e) => handleChange("city", e)}
@@ -40,7 +40,7 @@ const FormPersonalDetails = ({ nextStep, prevStep, values, handleChange }) => {
         <input
           type="bio"
           placeholder="Enter Bio"
-            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            className="p-3 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
           name="bio"
           value={values.bio}
           onChange={(e) => handleChange("bio", e)}

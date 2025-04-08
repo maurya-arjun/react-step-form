@@ -4,8 +4,8 @@ import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
 
-const UserForm = () => {
-  const [step, setStep] = useState(1);
+const UserForm = ( {step, setStep} ) => {
+    
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");

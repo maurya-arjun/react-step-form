@@ -14,7 +14,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
             <input
             type="text"
             placeholder="Enter First name"
-            className="p-3 outline-1 w-full lg:border-b lg:border-blue-500 lg:outline-0 focus:border-blue-600"
+            className="p-3 w-full lg:border-b lg:border-blue-400 lg:outline-0 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
             name="firstName"
             value={values.firstName}
             onChange={(e) => handleChange("firstName", e)}
@@ -28,7 +28,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
             type="text"
             placeholder="Enter Last name"
             name="lastName"
-            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            className="p-3 w-full lg:outline-0 lg:border-b lg:border-blue-400 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
             value={values.lastName}
             onChange={(e) => handleChange("lastName", e)}
             />
@@ -40,7 +40,7 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
             <input
             type="email"
             placeholder="Enter Email"
-            className="p-3 outline-1 w-full lg:outline-0 lg:border-b lg:border-blue-500 focus:border-blue-600"
+            className="p-3 w-full lg:outline-0 lg:border-b lg:border-blue-400 focus:border-blue-600 rounded-xl border-gray-500 border focus:outline-0 lg:border-0 lg:rounded-none"
             name="email"
             value={values.email}
             onChange={(e) => handleChange("email", e)}

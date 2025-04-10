@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Confirm = ({ nextStep, prevStep, values }) => {
   const handleNextClick = (e) => {
@@ -42,18 +43,12 @@ const Confirm = ({ nextStep, prevStep, values }) => {
         </dl>
       </div>
       <div className="mt-12 text-center space-x-2 space-y-2 sm:space-y-0">
-        <button
-          onClick={handleNextClick}
-          className="p-4 bg-blue-500 text-white rounded-sm cursor-pointer"
-        >
-          Confim & Continue
-        </button>
-        <button
-          onClick={handlePrevClick}
-          className="p-4 bg-blue-500 text-white rounded-sm cursor-pointer"
-        >
-          Back
-        </button>
+        <Button handleClick={handleNextClick} className="px-8 py-3 bg-blue-500 text-white rounded-sm cursor-pointer">
+            Confirm & Continue
+        </Button>
+        <Button handleClick={handlePrevClick} className="px-8 py-3 bg-blue-500 text-white rounded-sm cursor-pointer">
+            Prev
+        </Button>
       </div>
     </div>
   );

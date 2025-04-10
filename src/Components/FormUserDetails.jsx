@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import Button from "./Button";
 
 const FormUserDetails = ({ nextStep, values, handleChange }) => {
   function handleClick(e) {
@@ -48,12 +49,9 @@ const FormUserDetails = ({ nextStep, values, handleChange }) => {
         </div>
       </div>
       <div className="mt-12 text-center">
-        <button
-          onClick={handleClick}
-          className="p-4 bg-blue-500 text-white rounded-sm cursor-pointer"
-        >
-          Continue
-        </button>
+        <Button handleClick={handleClick} className="px-8 py-3 bg-blue-500 text-white rounded-sm cursor-pointer">
+            Next
+        </Button>
       </div>
     </Fragment>
   );

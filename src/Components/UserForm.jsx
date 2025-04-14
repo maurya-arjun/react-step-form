@@ -4,14 +4,15 @@ import FormPersonalDetails from "./FormPersonalDetails";
 import Confirm from "./Confirm";
 import Success from "./Success";
 
-const UserForm = ( {step, setStep} ) => {
-    
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [email, setEmail] = useState("");
-  const [occupation, setOccupation] = useState("");
-  const [city, setCity] = useState("");
-  const [bio, setBio] = useState("");
+const UserForm = ({ step, setStep }) => {
+  const [values, setValues] = useState({
+    firstName: "",
+    lastName: "",
+    email: "",
+    occupation: "",
+    city: "",
+    bio: "",
+  });
 
   // Proceed to next step
   const nextStep = () => {
@@ -25,32 +26,11 @@ const UserForm = ( {step, setStep} ) => {
 
   // Handle input change
   const handleChange = (input, e) => {
-    const value = e.target.value;
-    switch (input) {
-      case "firstName":
-        setFirstName(value);
-        break;
-      case "lastName":
-        setLastName(value);
-        break;
-      case "email":
-        setEmail(value);
-        break;
-      case "occupation":
-        setOccupation(value);
-        break;
-      case "city":
-        setCity(value);
-        break;
-      case "bio":
-        setBio(value);
-        break;
-      default:
-        break;
-    }
+    setValues((prevValues) => ({
+      ...prevValues,
+      [input]: e.target.value,
+    }));
   };
-
-  const values = { firstName, lastName, email, occupation, city, bio };
 
   switch (step) {
     case 1:
